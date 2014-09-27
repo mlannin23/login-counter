@@ -22,7 +22,7 @@ exports.unitTests = function(req, res) {
     if (passed) {
       nrPassed = passed.length;
     }
-    nrFailed = totalTests - nrPassed
+    nrFailed = totalTests - nrPassed;
 
     res.json({
       nrFailed: nrFailed,
