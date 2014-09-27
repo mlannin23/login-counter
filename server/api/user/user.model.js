@@ -68,7 +68,16 @@ UserSchema.statics.login = function(body, callback) {
             return callback(user.count);
         });
     });
+}
 
+UserSchema.statics.TESTAPI_resetFixture = function(callback) {
+
+    var User = mongoose.model('User', UserSchema);
+
+    User.find({}).remove(function(err) {
+        if (err) throw err;
+        return callback(SUCCESS);
+    })
 }
 
 module.exports = mongoose.model('User', UserSchema);
