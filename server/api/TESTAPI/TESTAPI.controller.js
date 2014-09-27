@@ -15,18 +15,14 @@ exports.resetFixture = function(req, res) {
 
 exports.unitTests = function(req, res) {
   var child = exec("npm test", function(error, stdout, stderr) {
-    var passed, nrPassed, failed, nrFailed, output, totalTests;
+    var passed, nrPassed, nrFailed, output, totalTests = 10;
 
     output = stdout;
     passed = output.match(/√|✓/g);
     if (passed) {
       nrPassed = passed.length;
     }
-    failed = output.match(/[0-9]+[)]/g);
-    if (failed) {
-      nrFailed = failed.length;
-    }
-    totalTests = nrPassed + nrFailed;
+    nrFailed = totalTests - nrPassed
 
     res.json({
       nrFailed: nrFailed,

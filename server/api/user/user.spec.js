@@ -27,7 +27,7 @@ describe('User', function () {
 describe('User', function () {
     describe('add()', function () {
         it('should return -3 when user is longer than 128 characters', function (done) {
-            User.add({ user: 'rpiegjfrek;nwfrjgnrdjkbgrlkjgbsljrgbnelsigueiughruglhdriughslrguhwerlgdughregleriughdshlgiurhesiguhwgslgiurehlsiurghdlsigruhsierughguhrlsglrdgsliuh', password: 'password' }, function (status) {
+            User.add({ user: 'rpiegjfrek;nwfrjgnrdjkferwflbnewkfuebfuewgfiuwegfiuwefgweiffreflrfelrgberifewfefwewfihfruieofgheirughguhrpgiuerhligjbjwefeisiurghdlsigruhsierughguhrlsglrdgsliuh', password: 'password' }, function (status) {
                 if (status == ERR_BAD_USERNAME) {
                     return done();
                 }
