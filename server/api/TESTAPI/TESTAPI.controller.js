@@ -11,7 +11,7 @@ exports.resetFixture = function(req, res) {
       errCode: status
     });
   });
-}
+};
 
 exports.unitTests = function(req, res) {
   var child = exec("npm test", function(error, stdout, stderr) {
@@ -34,4 +34,4 @@ exports.unitTests = function(req, res) {
       totalTests: totalTests
     });
   });
-}
+};

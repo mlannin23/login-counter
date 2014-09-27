@@ -16,7 +16,7 @@ exports.add = function(req, res) {
         errCode: status
       });
     }
-  })
+  });
 };
 
 // Login a user
@@ -33,4 +33,4 @@ exports.login = function(req, res) {
       });
     }
   });
-}
+};
