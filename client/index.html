@@ -10,32 +10,60 @@
 
     <title>Login Counter</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
   </head>
   <body>
-    <div id="main-screen">
-      <p id="message">Please enter your credentials below</p>
-
-      <form>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-
-        <input type="submit" id="login" value="Login">
-        <input type="submit" id="add-user" value="Add User">
-      </form>
+    <div class="header">
+      <h1 class="text-center">Login Counter</h1>
     </div>
+    <div class="login-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div id="main-screen" class="screen">
+              <p id="message" class="message">
+                Please enter your credentials below
+              </p>
 
-    <div id="logged-in-screen">
-      <p>Welcome <span id="username-placeholder"></span></p>
-      <p>You have logged in <span id="count-placeholder"></span> times</p>
+              <form>
+                <div class="form-group">
+                  <label for="username" class="hidden">Username</label>
+                  <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+                </div>
 
-      <a href="javascript:history.go(0)">Logout</a>
+                <div class="form-group">
+                  <label for="password" class="hidden">Password</label>
+                  <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-login">
+                    <input type="submit" id="login" value="Login" class="btn btn-outline btn-lg btn-block">
+                  </div>
+                  <div class="col-xs-6 col-add-user">
+                    <input type="submit" id="add-user" value="Add User" class="btn btn-outline btn-lg btn-block">
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div id="logged-in-screen" class="screen">
+              <h2 class="text-center">Welcome <span id="username-placeholder"></span></h2>
+              <p class="lead text-center">You have logged in <span id="count-placeholder"></span> times</p>
+
+              <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                  <a href="javascript:history.go(0)" class="btn btn-outline btn-lg btn-block">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
